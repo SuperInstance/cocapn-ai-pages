@@ -1,29 +1,51 @@
 # cocapn-ai-pages
 
-GitHub Pages source for [cocapn.ai](https://cocapn.ai).
+GitHub Pages source for [cocapn.ai](https://cocapn.ai) — the fleet hub landing page for the Cocapn AI ecosystem.
 
-Part of the **Cocapn Fleet** — a constellation of domain-specific landing pages and AI agents.
+## What is this?
 
-## About
-
-This repository contains the static site assets (HTML, CSS, images) deployed to GitHub Pages for the cocapn.ai domain.
+This repository hosts the static landing page for the Cocapn AI fleet. It serves as the central hub connecting all domain agents, architecture documentation, and operational portals within the Dojo Model ecosystem.
 
 ## Fleet Context
 
-The Cocapn Fleet operates 20+ interconnected domains, each with its own personality and purpose:
+Cocapn operates a distributed network of autonomous domain agents:
 
-- 🦀 [cocapn.ai](https://cocapn.ai) — Fleet hub
-- 🎮 [dmlog.ai](https://dmlog.ai) — Tabletop RPG tools
-- 🔨 [makerlog.ai](https://makerlog.ai) — Maker project tracking
-- 🌙 [luciddreamer.ai](https://luciddreamer.ai) — Lucid dreaming journal
-- 📚 [studylog.ai](https://studylog.ai) — Study partner
-- 🎣 [fishinglog.ai](https://fishinglog.ai) — Fishing intelligence
-- 🎮 [playerlog.ai](https://playerlog.ai) — Gaming tracker
-- 🔮 [purplepincher.org](https://purplepincher.org) — Agent connection portal
-- And more...
+- **Keeper**: `Oracle1` — central truth anchor and conflict resolver
+- **Edge Nodes**: `JC1`, `Forgemaster`, `CCC` — compute, build, and command nodes
+- **Domain Agents**: 8 specialized agents across fishing, study, lucid dreaming, making, DMing, gaming, fitness, and community knowledge
+- **Coordinator**: `PLATO` — shared knowledge mesh and fleet-wide state management
+
+## Deployment
+
+This site is deployed via **GitHub Pages** from the `main` branch:
+
+1. Push changes to `main`
+2. GitHub Pages automatically builds and serves from the repository root
+3. Custom domain `cocapn.ai` is configured via `CNAME` file
+
+No build step is required — `index.html` is a self-contained static file with inline CSS and JavaScript.
+
+## Local Development
+
+Open `index.html` directly in a browser, or serve with any static file server:
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## PLATO Integration
+
+The landing page includes a live PLATO Knowledge Browser that attempts to fetch from `http://localhost:8847/room/cocapn-fleet`. When the local PLATO instance is unavailable, it gracefully falls back to sample knowledge tiles.
 
 ## Links
 
-- Live site: https://cocapn.ai
-- Fleet hub: https://cocapn.ai
-- Fleet dashboard: http://147.224.38.131:4046/
+- **Live Site**: https://cocapn.ai
+- **Crab Trap Portal**: http://147.224.38.131:4059/?domain=cocapn.ai
+- **GitHub Org**: https://github.com/cocapn-ai
+- **Issues**: https://github.com/cocapn-ai/cocapn-ai-pages/issues
+- **Discussions**: https://github.com/cocapn-ai/cocapn-ai-pages/discussions
+
+## License
+
+MIT License — see repository for full terms.
